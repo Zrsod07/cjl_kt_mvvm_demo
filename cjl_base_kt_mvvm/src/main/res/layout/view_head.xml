@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    引入时，给 <include>命名： android:id="@+id/include"-->
+    <data>
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:id="@+id/re_titleBar"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <!--ic_back_no_autosize-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_left"
+            android:background="@drawable/ic_left"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/title"
+            android:layout_centerInParent="true"
+            tools:text="标题" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/title"
+            android:visibility="gone"
+            tools:text="保存"
+            tools:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#f3f3f3"
+            android:layout_alignParentBottom="true"
+            android:layout_height="1dp"/>
+    </RelativeLayout>
+</layout>

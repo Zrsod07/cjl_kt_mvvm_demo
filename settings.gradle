@@ -1,0 +1,2 @@
+include ':app',':cjl_base_kt_mvvm'
+rootProject.name = "cjl_kt_mvvm_demo"
