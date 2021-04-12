@@ -36,7 +36,6 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:resizeableActivity="true"
         android:theme="@style/Theme.Cjl_kt_mvvm_demo">
-        <activity android:name=".loadmore.LoadMoreActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
