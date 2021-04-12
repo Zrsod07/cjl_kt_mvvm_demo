@@ -13,7 +13,6 @@ class ListNoMoreActivity : BaseKtActivity<ListNoMoreVM, ActivityListNoMoreBindin
     override fun initData(savedInstanceState: Bundle?) {
         bind.vm = vm
         vm.getData("videocenterapi/filespaged",SimpleParams.create().putP("StuId","1545"))
-
     }
 
     override fun initObserve() {
