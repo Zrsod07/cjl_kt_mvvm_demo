@@ -1,4 +1,4 @@
-package com.cjl2021.cjl_kt_mvvm_demo
+package com.cjl.cjl_kt_mvvm_demo
 
 import org.junit.Test
 

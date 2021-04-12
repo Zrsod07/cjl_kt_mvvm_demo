@@ -1,16 +1,22 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
+//plugins {
+//    id 'com.android.application'
+//    id 'kotlin-android'
+//}
+
+apply plugin: 'com.android.application'
+//apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'//使用kapt依赖rxhttp-compiler时必须
+
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.cjl2021.cjl_kt_mvvm_demo"
-        minSdkVersion 29
-        targetSdkVersion 30
+        applicationId "com.cjl.cjl_kt_mvvm_demo"
+        minSdkVersion 24
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
@@ -30,6 +36,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    //使用databing
+    dataBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
@@ -43,7 +55,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+//    kapt lib['android-databinding']
 
+    kapt 'com.android.databinding:compiler:3.5'//dataBinding需要的编译处理工具
 
     implementation project(path: ':cjl_base_kt_mvvm')
 

@@ -16,6 +16,7 @@ import com.gyf.immersionbar.ImmersionBar
 import com.hjq.toast.ToastUtils
 import com.tencent.mmkv.MMKV
 import java.lang.reflect.ParameterizedType
+import kotlin.reflect.KVariance
 
 abstract class BaseKtActivity<VM : BaseVM, D : ViewDataBinding> : AppCompatActivity() {
 
@@ -37,11 +38,10 @@ abstract class BaseKtActivity<VM : BaseVM, D : ViewDataBinding> : AppCompatActiv
         )
         bind = DataBindingUtil.setContentView(this, getLayoutId())
         bind.lifecycleOwner = this
-
         val type = (this.javaClass.genericSuperclass as ParameterizedType).actualTypeArguments
         getVM(type[0] as Class<VM>)
         vm.dialogLD.observe(this, Observer { str ->
-            if (str==null) {
+            if (!TextUtils.isEmpty(str)) {
                 showProgressDialog(str)
             } else {
                 dismissProgressDialog()
@@ -83,7 +83,7 @@ abstract class BaseKtActivity<VM : BaseVM, D : ViewDataBinding> : AppCompatActiv
         } else {
             mProDialog.setMsg(vm.loadingStr)
         }
-        mProDialog.setCancelable(cancelable)
+        mProDialog.setCancelable(true)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             if (!(isDestroyed || isFinishing) && !mProDialog.isShowing) {
                 mProDialog.show()

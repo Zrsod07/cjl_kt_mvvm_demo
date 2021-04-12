@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="com.cjl2021.cjl_kt_mvvm_demo.loadmore.LoadMoreVM" />
+            type="com.cjl.cjl_kt_mvvm_demo.loadmore.LoadMoreVM" />
     </data>
 
     <LinearLayout

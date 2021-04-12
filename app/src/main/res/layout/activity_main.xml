@@ -7,11 +7,11 @@
 
         <variable
             name="vm"
-            type="com.cjl2021.cjl_kt_mvvm_demo.MainVM" />
+            type="com.cjl.cjl_kt_mvvm_demo.MainVM" />
 
         <variable
             name="mainlis"
-            type="com.cjl2021.cjl_kt_mvvm_demo.MainActivity.MainLis" />
+            type="com.cjl.cjl_kt_mvvm_demo.MainActivity.MainLis" />
 
     </data>
 
@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:hint="账号"
             android:gravity="center_vertical"
+            android:text="@={vm.userName}"
             android:paddingLeft="6dp"
             android:layout_height="50dp"/>
 
@@ -34,6 +35,7 @@
             android:hint="密码"
             android:gravity="center_vertical"
             android:paddingLeft="6dp"
+            android:text="@={vm.userPwd}"
             android:layout_height="50dp"/>
 
         <TextView

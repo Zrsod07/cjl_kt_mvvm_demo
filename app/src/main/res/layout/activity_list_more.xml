@@ -7,16 +7,10 @@
 
         <variable
             name="view"
-            type="com.cjl2021.cjl_kt_mvvm_demo.listmore.ListMoreActivity" />
+            type="com.cjl.cjl_kt_mvvm_demo.listmore.ListMoreActivity" />
         <variable
             name="vm"
-            type="com.cjl2021.cjl_kt_mvvm_demo.listmore.ListMoreVM" />
-        <variable
-            name="vmm"
-            type="com.cjl2021.cjl_kt_mvvm_demo.listmore.ListMoreVM" />
-        <variable
-            name="vieww"
-            type="com.cjl2021.cjl_kt_mvvm_demo.listmore.ListMoreActivity" />
+            type="com.cjl.cjl_kt_mvvm_demo.listmore.ListMoreVM" />
 
     </data>
 
@@ -28,8 +22,8 @@
             android:id="@+id/srlList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:Refreshing="@{vmm.adapter.refreshing}"
-            app:onRefreshListener="@{vieww::onRefreshListener}">
+            app:Refreshing="@{vm.adapter.refreshing}"
+            app:onRefreshListener="@{view::onRefreshListener}">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvList"
                 android:layout_width="match_parent"
