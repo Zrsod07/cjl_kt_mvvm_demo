@@ -8,9 +8,7 @@ import com.cjl_base_kt_mvvm.mode.SimpleParams
 
 class ListNoMoreActivity : BaseKtActivity<ListNoMoreVM, ActivityListNoMoreBinding>() {
 
-
     override fun getLayoutId() = R.layout.activity_list_no_more
-
 
     override fun initData(savedInstanceState: Bundle?) {
         bind.vm = vm
